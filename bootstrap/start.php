@@ -34,15 +34,32 @@ mb_internal_encoding('UTF-8');
 
 /*
 |--------------------------------------------------------------------------
+| Load Environment Variables
+|--------------------------------------------------------------------------
+|
+| Next we will load the environment variables for the application which
+| are stored in the ".env" file. These variables will be loaded into
+| the $_ENV and "putenv" facilities of PHP so they stay available.
+|
+*/
+
+$app->register(new App\Providers\DotEnvServiceProvider());
+// Rund DotEnv
+$app['dotenv'];
+
+// Set debug mode
+$app['debug'] = $app['dotenv.app_debug'];
+
+/*
+|--------------------------------------------------------------------------
 | Register all needed Service Provider
 |--------------------------------------------------------------------------
 |
 | Here we will set tall service provider for silex.
 |
 */
-$app['debug'] = true;
-$app->register(new App\Providers\Whoops\WhoopsServiceProvider());
 
+$app->register(new App\Providers\Whoops\WhoopsServiceProvider());
 $app->register(new Silex\Provider\TwigServiceProvider(), [
     'twig.path' => __DIR__.'/../app/Views',
 ]);

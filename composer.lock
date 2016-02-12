@@ -4,9 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a14e8c7b27e15665591d8f16d8a4c97f",
-    "content-hash": "60b2ef04a8345a50eaab9f4a632ea794",
+    "hash": "8b701a666f0bbfe1a0f4c4d709c1c8d8",
+    "content-hash": "75c8b1b5ed3561f67b83494479b6c3f5",
     "packages": [
+        {
+            "name": "cekurte/environment",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cekurte/environment.git",
+                "reference": "c8352292ac75eba154805aa67b214c4b180d5e8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cekurte/environment/zipball/c8352292ac75eba154805aa67b214c4b180d5e8c",
+                "reference": "c8352292ac75eba154805aa67b214c4b180d5e8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "cekurte/tdd": "^1.0.1",
+                "phpunit/phpunit": "^4.8",
+                "sensiolabs/security-checker": "^3.0",
+                "sjparkinson/static-review": "^5.1",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cekurte\\Environment\\": "src/"
+                },
+                "files": [
+                    "src/env.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "João Paulo Cercal",
+                    "email": "jpcercal@gmail.com"
+                }
+            ],
+            "description": "A library to get the values from environment variables and process to php data types",
+            "keywords": [
+                "config",
+                "data",
+                "env",
+                "environment",
+                "process",
+                "types",
+                "variables"
+            ],
+            "time": "2015-12-07 13:10:10"
+        },
         {
             "name": "ehibes/silex-i18n-routing-service-provider",
             "version": "dev-master",
