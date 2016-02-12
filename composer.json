@@ -1,0 +1,46 @@
+{
+    "name"       : "anolilab/howtoclearmybrowsercache",
+    "type"       : "library",
+    "description": "",
+    "keywords"   : [""],
+    "license"    : "MIT",
+    "homepage"   : "http://github.com/anolilab/howtoclearmybrowsercache",
+    "authors"    : [
+        {
+          "name"    : "Daniel Bannert",
+          "email"   : "d.bannert@anolilab.de",
+          "homepage": "http://www.anolilab.de",
+          "role"    : "Developer"
+        }
+    ],
+    "require": {
+        "php"                                        : ">=5.6",
+        "mheap/silex-assetic"                        : "^2.0",
+        "ikimea/browser"                             : "^1.12",
+        "twig/twig"                                  : "^1.24",
+        "silex/silex"                                : "^2.0@dev",
+        "symfony/translation"                        : "^3.0",
+        "symfony/twig-bridge"                        : "^3.0",
+        "ehibes/silex-i18n-routing-service-provider" : "dev-master"
+    },
+    "require-dev": {
+        "filp/whoops"                                : "^2.0",
+        "mockery/mockery"                            : "~0.9.4",
+        "phpunit/phpunit"                            : "~5.0.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\"                                  : "app/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master"                             : "1.0.0-dev"
+        }
+    },
+    "config": {
+        "bin-dir"                                    : "vendor/bin"
+    },
+    "minimum-stability"                              : "dev",
+    "prefer-stable"                                  : true
+}

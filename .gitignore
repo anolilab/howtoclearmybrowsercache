@@ -1,0 +1,8 @@
+.DS_Store
+.php_cs.cache
+
+composer.phar
+Thumbs.db
+
+/build/logs
+/vendor
