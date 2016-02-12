@@ -1,5 +1,6 @@
 .DS_Store
 .php_cs.cache
+.env
 
 composer.phar
 Thumbs.db

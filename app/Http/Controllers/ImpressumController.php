@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
-class HomeController
+class ImpressumController
 {
     public function render(Request $request, Application $app)
     {
@@ -18,6 +18,6 @@ class HomeController
 
     protected function twigTemplate()
     {
-        return 'Index.twig';
+        return 'Impressum.twig';
     }
 }

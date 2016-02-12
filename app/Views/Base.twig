@@ -1,0 +1,39 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" {{language_attributes}}> <!--<![endif]-->
+<head>
+{% block head %}
+    {% include 'Partials/Head/Infos.twig' %}
+    {% include 'Partials/Seo/Facebook.twig' %}
+
+    <style type="text/css">
+        {% include 'Partials/Head/Style.twig' %}
+    </style>
+{% endblock %}
+</head>
+    <body class="">
+        <header>
+            {% block header %}
+                {% include 'Partials/Menu.twig' %}
+            {% endblock %}
+        </header>
+
+        <main class="">
+            {% block content %}
+                Sorry, no content
+            {% endblock %}
+        </main>
+
+        {% block footer %}
+            <footer>
+                {% include 'Partials/Footer/Main.twig' %}
+            </footer>
+        {% endblock %}
+
+        {% include 'Partials/Cookie.twig' %}
+
+        {% include 'Partials/Tracking.twig' %}
+    </body>
+</html>
