@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+body strong {
+    font-weight: 600;
+}
+
+{% include 'Partials/Head/CssStyleBrowser.twig' %}
+
+main {
+    position: relative;
+}
+
+main:before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -85px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url('../img/shadow.png') no-repeat center 0;
+}
+
+.browser {
+    color: #fff;
+}
+
+.browser .center {
+      display: block;
+      margin: 10% 0 0 0;
+      width: 100%;
+      height: 20%;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h2 .icon {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 100px;
+    margin: 0 auto 35px;
+    background: transparent url(../img/browsers-bg.png) no-repeat;
+    background-size: auto 100px;
+}
+
+.info {
+    position: relative;
+    z-index: 10;
+    margin-top: 10%;
+}
+
+.info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.info h3 span {
+    text-transform: capitalize;
+}
+
+.list li {
+    padding: 5px 0 5px 0;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[class*='column-'] {
+    width: 100%;
+    float: left;
+    min-height: 1px;
+    padding-right: 20px; /* column-space */
+}
+
+.grid {
+    width: 100%;
+    max-width: 1140px;
+    min-width: 748px; /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column-9 {
+    width: 75%;
+}
+
+.column-8 {
+    width: 66.66%;
+}
+
+.column-6 {
+    width: 50%;
+}
+
+.column-4 {
+    width: 33.33%;
+}
+
+.column-3 {
+    width: 25%;
+}
+
+@media handheld, only screen and (max-width: 767px) {
+    .grid {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px; /* grid-space to left */
+        padding-right: 10px; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
+    }
+
+    [class*='column-'] {
+        width: auto;
+        float: none;
+        margin: 10px 0;
+        padding-left: 0;
+        padding-right: 10px; /* column-space */
+    }
+
+    .hide-on-mobile {
+        display: none !important;
+        width: 0;
+        height: 0;
+    }
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}

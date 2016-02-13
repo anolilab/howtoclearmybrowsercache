@@ -59,17 +59,34 @@ $app['debug'] = $app['dotenv.app_debug'];
 |
 */
 
+// Whoops
 $app->register(new App\Providers\Whoops\WhoopsServiceProvider());
+
+// Twig
 $app->register(new Silex\Provider\TwigServiceProvider(), [
     'twig.path' => __DIR__.'/../app/Views',
 ]);
+$app['twig']->addExtension(new \nochso\HtmlCompressTwig\Extension());
+
+// Translation
+$app->register(new Silex\Provider\LocaleServiceProvider());
+$app->register(new Silex\Provider\TranslationServiceProvider(), [
+    'locale_fallbacks' => ['en'],
+]);
+
+// Browser
+$app->register(new App\Providers\Browser\BrowserServiceProvider());
+
+$app['twig']->addGlobal('get_platform', strtolower($app['browser']->getPlatform()));
+$app['twig']->addGlobal('get_browser', strtolower($app['browser']->getBrowser()));
+$app['twig']->addGlobal('get_browser_version', $app['browser']->getVersion());
 
 /*
 |--------------------------------------------------------------------------
 | Set The Routes
 |--------------------------------------------------------------------------
 |
-| Here we will set the default routes for silex.
+| Here we will set the routes for silex.
 |
 */
 

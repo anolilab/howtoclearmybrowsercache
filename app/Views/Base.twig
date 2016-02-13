@@ -1,15 +1,18 @@
+{% htmlcompress %}
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{language_attributes}}> <![endif]-->
-<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{language_attributes}}> <![endif]-->
-<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{language_attributes}}> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" {{language_attributes}}> <!--<![endif]-->
+<!--[if lt IE 7]><html class="{{ get_platform }} {{ get_browser }} {{ get_browser_version }} no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="{{ get_platform }} {{ get_browser }} {{ get_browser_version }} no-js ie ie7 lt-ie9 lt-ie8" {{language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="{{ get_platform }} {{ get_browser }} {{ get_browser_version }} no-js ie ie8 lt-ie9" {{language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="{{ get_platform }} {{ get_browser }} {{ get_browser_version }} no-js" {{language_attributes}}> <!--<![endif]-->
 <head>
 {% block head %}
     {% include 'Partials/Head/Infos.twig' %}
     {% include 'Partials/Seo/Facebook.twig' %}
 
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,300' rel='stylesheet' type='text/css'>
     <style type="text/css">
-        {% include 'Partials/Head/Style.twig' %}
+        {% include 'Partials/Head/CssStyle.twig' %}
     </style>
 {% endblock %}
 </head>
@@ -20,7 +23,7 @@
             {% endblock %}
         </header>
 
-        <main class="">
+        <main class="grid">
             {% block content %}
                 Sorry, no content
             {% endblock %}
@@ -37,3 +40,4 @@
         {% include 'Partials/Tracking.twig' %}
     </body>
 </html>
+{% endhtmlcompress %}
