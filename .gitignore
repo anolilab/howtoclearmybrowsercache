@@ -7,3 +7,4 @@ Thumbs.db
 
 /build/logs
 /vendor
+/node_modules

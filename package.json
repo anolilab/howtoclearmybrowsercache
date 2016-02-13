@@ -1,0 +1,23 @@
+{
+  "name": "howtoclearmybrowsercache",
+  "version": "1.0.0",
+  "description": "Will provide you with a how to refresh (clear) the cache from your browser.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anolilab/howtoclearmybrowsercache.git"
+  },
+  "author": "Daniel Bannert d.bannert@anolilab.de",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anolilab/howtoclearmybrowsercache/issues"
+  },
+  "homepage": "https://github.com/anolilab/howtoclearmybrowsercache#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-webfont": "^1.1.1"
+  }
+}
